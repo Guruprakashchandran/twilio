@@ -1,0 +1,6 @@
+for(int i = l;i<r;++i){
+
+	swap(a+l,a+i);
+	permutation(a,l+1,r);
+	swap(a+l,a+i);
+}

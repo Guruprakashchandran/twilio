@@ -1,0 +1,10 @@
+AC98f15f492f81b15447daa8f707398153
+26a61483cd9b75eff8867d2ee77ae42a
+
+26a61483cd9b75eff8867d2ee77ae42a
+
+curl.exe -X POST "https://api.twilio.com/2010-04-01/Accounts/AC98f15f492f81b15447daa8f707398153/Messages.json" ^
+  --data-urlencode "Body=Hello from Twilio" ^
+  --data-urlencode "From=+14175386296" ^
+  --data-urlencode "To=+919384348641" ^
+  -u "AC98f15f492f81b15447daa8f707398153:26a61483cd9b75eff8867d2ee77ae42a"
