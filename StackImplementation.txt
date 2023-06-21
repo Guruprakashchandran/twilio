@@ -1,0 +1,144 @@
+String s0 = "Language Details\n1) Tamil\n2)Malayalam\n3)Kanadam\n4)urudhu\n0)Exit";
+string s1 = "1) Balance\n2) My Offer\n2) New Offer\n9) Back\n0) Exit";
+String s2_1 = "1)Current Packs Info\n2) Upcoming Packs Info\n3) Others\n9) Back\n0) Exit";
+String s2_2 = "1) Pack1\n2) Pack2\n3) Pack3\n9) Back\n0) Exit";
+String s2_3 = "1) Mrp Product\n9) Back\n0) Exit";
+String s3_1 = "9234949576\nBal.Rs0.01\nOutgoing Validity:27-01-2023\nUnlimited Calls,1.5GB/Day,100 SMS/day\nPack Valid till 27-01-2023\n1536 MB left\n9) Back\n0) Exit";
+String s3_2 = "Sorry,We are unable to process your request.\nyou don't have any offer\n9) Back\n0) Exit";
+String s3_3 = "Others:\nA- Data Changing : No\n9) Back\n0) Exit";
+String s4_1 = "Stay connected with 12GB data at just Rs118\n9) Back\n0) Exit";
+String s4_2 = "Stay connected with 15GB data at just Rs148\n9) Back\n0) Exit";
+String s4_3 = "Stay connected with 4GB data at just Rs64\n9) Back\n0) Exit";
+String s5_3 = "External application  down\n9) Back\n0) Exit";
+
+public class {
+
+	private Stack<Options> backward = new Stack<>();
+	class Options{
+
+		private int option,level,category;
+		Options(int option,int level,int category){
+		
+			this.option = option;
+			this.level = level;
+			this.category = category;
+		}
+	}
+	private void process(){
+		
+		Scanner scan = new Scanner(System.in);
+		backward.push(new Options(0,0,0));
+		printDetails(0,0,0);
+		System.out.println("Please! select category: ");
+		do{
+
+			if(option != 9){
+	
+				backward.pop();
+				if(backward.isEmpty()){
+
+					break;
+				}
+			}
+			else {
+				if(backward.peek().level == 2){
+				
+					backward.push(option,backward.peek().level + 1 + Option - 1,category);	
+				}		
+				else {
+					backward.push(option,backward.peek().level+1,0)
+				}
+			}
+		}while(option != 0);
+		System.out.println("Exitted!!!");	
+		scan.close();
+	}
+	private void print(String[] details){
+
+		for(String v:str) {
+			System.out.println(v);
+		}	
+	}
+	private void printDetails(){
+		if(level == 0){
+	
+			final String s = "1) Tamil\n2)Malayalam\n3)Kanadam\n4)urudhu\n0)Exit";
+			String[] details = s.split("\n",-2);
+			print(details);
+		}
+		else if(level == 1){
+	
+			final String s1 = "1) Balance\n2) My Offer\n2) New Offer\n9) Back\n0) Exit";
+			String[] details = s.split("\n",-2);
+			print(details);
+		}
+		else if(level == 2){
+
+			switch(Option){
+	
+				case 1:
+					final String s1_1 = "1)Current Packs Info\n2) Upcoming Packs Info\n3) Others\n9) Back\n0) Exit";
+					String[] details = s.split("\n",-2);
+					print(details);
+					break;
+				case 2:
+					final String s1_2 = "1) Pack1\n2) Pack2\n3) Pack3\n9) Back\n0) Exit";
+					String[] details = s.split("\n",-2);
+					print(details);
+					break;
+				case 3:
+					final String s1_1_3 = "Others:\nA- Data Changing : No\n9) Back\n0) Exit";
+					String[] details = s.split("\n",-2);
+					print(details);
+					break;
+			}
+		}
+		else if(level == 3){
+	
+			switch(Option){
+
+				case 1:
+					final String s3_1 = "9234949576\nBal.Rs0.01\nOutgoing Validity:27-01-2023\nUnlimited Calls,1.5GB/Day,100 SMS/day\nPack Valid till 27-01-2023\n1536 MB left\n9) Back\n0) Exit";
+					String[] details = s.split("\n",-2);
+					print(details);
+					break;
+				case 2:
+					final String s3_2 = "Sorry,We are unable to process your request.\nyou don't have any offer\n9) Back\n0) Exit";
+					String[] details = s.split("\n",-2);
+					print(details);
+					break;
+				case 3:
+					final String s3_3 = "Others:\nA- Data Changing : No\n9) Back\n0) Exit";
+					String[] details = s3_1.split("\n",-2);
+					print(details);
+					break;
+			}
+		}
+		else if(level == 4){
+
+			switch(Option){
+
+				case 1:
+					final String s4_1 = "Stay connected with 12GB data at just Rs118\n9) Back\n0) Exit";
+					String[] details = s4_1.split("\n",-2);
+					print(details);
+					break;
+				case 2:
+					final String s4_2 = "Stay connected with 15GB data at just Rs148\n9) Back\n0) Exit";
+					String[] details = s4_2.split("\n",-2);
+					print(details);
+					break;
+				case 3:
+					final String s4_3 = "Stay connected with 4GB data at just Rs64\n9) Back\n0) Exit";
+					String[] details = s4_3.split("\n",-2);
+					break;
+			}
+		}
+		else if(level == 5){
+	
+			final String s5_1 = "External application  down\n9) Back\n0) Exit";
+			String[] details = s.split("\n",-2);
+			print(details);
+		}
+	}
+}

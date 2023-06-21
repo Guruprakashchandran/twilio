@@ -1,0 +1,57 @@
+<html>
+
+<body>
+	<input type = "number" name = "num1" id = "num1" placeholder = "num1">
+	<input type = "number" name = "num2" id = "num2" placeholder = "num2">
+	<input type = "text" name = "Operation" id = "oper" placeholder = "operation">
+	<button onclick = "arithmeticOperation()">sum</button>
+<script>
+
+function arithmeticOperation(){
+
+	var operation = document.getElementById("oper").value;
+
+	if(operation == "addition"){
+		
+		addition();
+	}
+	else if(operation == "subtraction"){
+
+		subtraction();
+	}
+	else if(operation == "multiplication"){
+
+		multiplication();
+	}
+	else if(operation == "division"){
+
+		division();
+	}
+}
+function addition(){
+
+	var a = parseInt(document.getElementById("num1").value);
+	var b = parseInt(document.getElementById("num2").value);
+	document.write(a+b);
+}
+function subtraction(){
+	
+	var a = parseInt(document.getElementById("num1").value);
+	var b = parseInt(document.getElementById("num2").value);
+	document.write(a-b);
+}
+function multiplication(){
+	
+	var a = parseInt(document.getElementById("num1").value);
+	var b = parseInt(document.getElementById("num2").value);
+	document.write(a*b);
+}
+function division(){
+	
+	var a = parseInt(document.getElementById("num1").value);
+	var b = parseInt(document.getElementById("num2").value);
+	document.write(a/b);
+}
+</script>
+</body>
+</html>

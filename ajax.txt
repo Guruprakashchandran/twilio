@@ -1,0 +1,14 @@
+function method(){
+		
+		var xhr = new XMLHttpRequest();
+		//xhr.onreadystatechange = () =>{
+			
+			if(readystate == 4){
+				
+				var text = 4;
+			}
+		//}
+		xhr.open();
+		xhr.send();
+	}
+http://localhost:8080/guru-zsgs/file

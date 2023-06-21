@@ -1,0 +1,1 @@
+<div class = "yourChat"><p class = "yourMessage">${userdetail[person1msg].message}</p></div>

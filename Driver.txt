@@ -1,0 +1,56 @@
+CLASS FOR NAME : com.mysql.jdbc.Driver
+DRIVER : jdbc:mysql://localhost:3306/sonoo
+
+
+//		boolean isAdded = false;
+//		List<User> users = UserDetailsRepository.getInstance().getDetails();
+//		for(int i= 0;i<users.size();++i) {
+//			
+//			if(users.get(i).getMobileNo().equals(mobileNo)) {
+//				
+//				loginOrRegisterPageModelToControllerCall.userMobileNoExist();
+//			}
+//			else if(users.get(i).getEmailId().equals(emailId)) {
+//				
+//				loginOrRegisterPageModelToControllerCall.userEmailExist();
+//			}
+//		}
+
+
+//	public static void funcion() throws SQLException {
+//		
+//		try {
+//			
+//			String name = "guru";
+//			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/task1","root","root");
+//			st = connection.createStatement();
+//			result = st.executeQuery("select password from table2 where name ='"+name.toString()+"'");
+//			if(result.next()) {
+//				
+//				String pass = result.getString("password");
+//				if(pass.equals("guru")) {
+//					
+//					System.out.println("\nLogin Successfully!!!");
+//				}
+//			}
+//		}
+//		catch(Exception e) {
+//			
+//			e.printStackTrace();
+//		}
+//		finally {
+//			
+//			connection.close();
+//			
+//		}
+//	}
+
+
+//		List<User> users = UserDetailsRepository.getInstance().getDetails();
+//		for(int i = 0;i<users.size();++i) {
+//			
+//			if(users.get(i).getMobileNo().equals(mobileNo) && users.get(i).getPassword().equals(password)) {
+//				this.mobileNo = mobileNo;
+//				isExist = true;
+//			}
+//		}
